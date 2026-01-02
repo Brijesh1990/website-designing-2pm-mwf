@@ -1,0 +1,92 @@
+body
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+background: linear-gradient(rgba(0,0,20,0.6),rgba(0,0,50,.8)),url('../images/bg.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;    
+} 
+#main
+{
+ width: 80%;
+ height: auto;
+ margin: auto;   
+}
+#main h1 
+{
+text-align: center;
+margin-top: 10%;
+color: white;
+font-size: 65px;    
+}
+#main h3 
+{
+text-align: center;
+margin-top: 5%;
+color: white;
+font-size: 25px;
+font-weight: 200;    
+}
+#main h5 
+{
+text-align: center;
+margin-top: 2%;
+color: white;
+font-size: 25px;
+font-weight: 200;    
+}
+#main h6 
+{
+text-align: center;
+margin-top: 1%;
+color: white;
+font-size: 35px;
+font-weight:600;    
+animation:fadeIn 2s infinite !important;
+}
+#main h2 
+{
+ text-align: center;
+color: white;
+font-size: 45px;
+font-weight: 600;    
+}
+.box 
+{
+width: 90%;
+height: auto;
+margin: 5px;
+padding: 15px;
+display: grid;
+margin-top: 10%;
+grid-template-columns: auto auto;    
+}
+.box1
+{
+width: 80%;
+height: auto;
+background-color: black;
+color: white !important;
+margin: 25px;
+padding: 85px 25px;    
+text-align: center;
+font-size: 28px;
+border: solid 10px white;
+}
+
+.box2
+{
+width: 80%;
+height: auto;
+background-color: black;
+color: white !important;
+margin: 25px;
+padding: 85px 25px;    
+text-align: center;
+font-size: 28px;
+border: solid 10px white;
+}
+

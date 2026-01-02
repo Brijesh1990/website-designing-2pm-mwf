@@ -1,0 +1,396 @@
+:root 
+{
+--bg-darkgray:#1f1f1f;
+--bg-white:#ffffff;
+--bg-lightgray:#262626;
+--bg-lightgray1:#343434;
+--text-darkgray:#1f1f1f;
+--text-white:#ffffff;
+--text-lightgray:#262626;
+--text-lightgray1:#343434; 
+}
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+background-color: var(--bg-darkgray); 
+color: var(--text-white);   
+}
+#main 
+{
+width: 98%;
+height: auto;
+margin: auto;
+padding: 10px 10px;
+display: flex;
+flex-wrap: nowrap;    
+}
+.leftsidebar
+{
+width: 25%;
+height: 92vh;
+border: solid 1px white;
+border-radius: 15px;
+position: fixed;
+padding: 15px;
+background-color: var(--bg-darkgray);
+z-index: 5;
+}
+.navbar-link li 
+{
+padding: 25px 5px;
+font-size: 25px;
+list-style-type: none;
+text-decoration: none;    
+}
+.navbar-link a 
+{
+list-style-type: none;
+text-decoration: none;
+color: white;    
+}
+.rightsidebar
+{
+width: 70%;
+height: auto;
+padding: 15px;
+margin-left: 30%;
+}
+.banners
+{
+ width: 100%;
+ height: auto;
+ margin-bottom: 10% !important;
+ padding: 25px;
+ border: solid 1px transparent;  
+ display: flex;
+}
+.banners-txt
+{
+width: 60%;
+height: auto;
+animation: 1s fadeInLeft alternate;
+}
+.banners-txt h1
+{
+font-size: 65px;
+letter-spacing: 1px;
+font-weight: bolder;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+.banners-txt h2
+{
+font-size: 45px;
+letter-spacing: 1px;
+font-weight: 300;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+line-height: 0.2;
+}
+.banners-txt h3
+{
+font-size: 25px;
+letter-spacing: 1px;
+font-weight: 300;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+line-height: 1;
+}
+.banners-txt #btn1
+{
+width: 180px;
+height: auto;
+font-size: 20px;
+margin-top: 10% !important;
+padding: 15px 0px;
+border: none;
+border-radius: 20px;
+background-color: var(--bg-white);  
+  
+}
+.banners-txt #btn2
+{
+width: 180px;
+height: auto;
+margin-top: 10% !important;
+font-size: 20px;
+padding: 15px 0px;
+border: solid 1px white;
+margin-left: 2%;
+border-radius: 20px;
+color: white;
+background-color: transparent;    
+}
+.banners-photo
+{
+width: 40%;
+height: auto;
+animation: 1s fadeInRight alternate;
+margin-top: 2%;
+}
+.banners-photo img 
+{
+width: 90%;
+height: auto;
+border-radius: 10px;
+box-shadow: 15px 10px gray;    
+}
+.get-to-know-me
+{
+ width: 100%;
+ height: auto;
+ padding: 15px;
+ margin-top: 5%;
+ display: grid; 
+ grid-template-columns: auto auto;    
+}
+.get-to-know-me-photo
+{
+width: 90%;
+height: 90vh;
+padding: 10px;
+border-radius: 15px;
+background-color: var(--bg-lightgray);
+border-top: solid 2px white;
+}
+.get-to-know-me-photo img 
+{
+ width: 125px;
+ height: 125px;
+ border-radius: 50%;
+ border: solid 3px white;   
+}
+.input-area 
+{
+height: auto;
+margin: auto;
+margin-top: 2% !important;
+padding: 15px;
+background-color: var(--bg-lightgray1);    
+border:  solid 1px gray;
+border-radius: 10px;
+transition: 0.5s ease all;
+}
+.input-area:hover 
+{
+height: auto;
+margin: auto;
+padding: 15px;
+background-color: var(--bg-white);    
+border:  none;
+color: black;
+border-radius: 10px;
+}
+.get-to-know-me-txt
+{
+width: 90%;
+height: auto;
+margin: 0px;
+padding: 0px;
+margin-left: 2%;
+}
+.get-to-know-me-txt #btn1
+{
+width: auto;
+height: auto;
+padding: 10px;
+font-size: 18px;
+border: 0;
+border-radius: 20px;
+background-color: white;
+color: black;    
+}
+#client-details
+{
+width: 100%;
+height: auto;
+border-radius: 15px;
+background-color: #343434 !important;    
+}
+#btn2
+{
+width: auto;
+height: auto;
+padding: 12px;
+font-size: 18px;
+border: 0;
+border-radius: 20px;
+background-color: white;
+color: black;     
+}
+#btn3 
+{
+ width: auto;
+height: auto;
+padding: 12px;
+font-size: 18px;
+border: 0;
+border-radius: 20px;
+background-color: var(--bg-lightgray1);
+color: white;   
+}
+#project-details
+{
+width: 100%;
+height: auto;
+padding: 15px;
+border-radius: 15px;
+background-color: #343434 !important;    
+}
+.skills
+{
+ width: 100%;
+ height: auto;
+ padding: 25px;
+ margin-top: 5%;     
+}
+.resume
+{
+ width: 100%;
+ height: auto;
+ padding: 25px;
+ margin-top: 5%;     
+}
+.portfolio
+{
+ width: 100%;
+ height: auto;
+ padding: 25px;
+ margin-top: 5%;     
+}
+.contact-us
+{
+ width: 100%;
+ height: auto;
+ padding: 25px;
+ margin-top: 5%;     
+}
+
+@media only screen and (max-width: 768px) 
+{
+#main 
+{
+display: block !important;
+width: 100%;
+height: auto;
+margin: auto;
+
+}
+.leftsidebar
+{
+  width:90%;
+  height: auto;
+  position: relative;
+  margin-bottom: 5%;
+  display: none;
+}
+.leftsidebar-mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: #212529;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  #menu-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Hidden menu by default */
+  #mobile-menu {
+    display: none;
+    background: #343a40;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  /* Active when toggled */
+  #mobile-menu.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  #mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0px;
+    border-bottom: 1px solid #495057;
+  }
+
+  #mobile-menu ul li a:hover {
+    background: #0d6efd;
+  }
+
+  /* Smooth fade animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.rightsidebar
+{
+  width: 90%;
+  height: auto;
+  margin-left: 0%;
+  margin-bottom: 5%;
+}
+.navbar-link li 
+{
+  padding: 15px 5px;
+  font-size: 20px;  
+}
+.navbar-link a 
+{
+  font-size: 20px;  
+}
+
+.banners
+{
+flex-direction: column;
+height: auto;
+margin-bottom: 5% !important;
+padding: 10px;
+
+}
+.banners-txt
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 10px 0px;
+text-align: center;
+}
+.banners-photo
+{
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+.get-to-know-me
+{
+  grid-template-columns: auto;    
+}
+
+}

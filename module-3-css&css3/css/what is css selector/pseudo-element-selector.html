@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<style>
+body 
+{
+margin: 0;
+padding: 0;
+background-color: lightgray;
+}
+.app 
+{
+ width: 50%;
+ height: auto;
+ margin: auto;
+ padding: 25px; 
+ margin-top: 5%;
+ background-color: white;  
+}
+.app p::after
+{
+ content: "Note :Hello i am on leave tommarow";
+ font-size: 20px;
+ color: red;   
+}
+
+.app1 
+{
+ width: 50%;
+ height: auto;
+ margin: auto;
+ padding: 25px; 
+ margin-top: 5%;
+ background-color: white;  
+}
+.app1 p::before
+{
+ content: "Note :Hello i am on leave tommarow";
+ font-size: 20px;
+ color: red;   
+}
+</style>
+</head>
+<body>
+
+<!-- <div class="app">
+<p>after the element and before the element applied any style that type of selector is called pseudo element selector </p>
+
+<p>1. after the element :
+
+p::after 
+{
+content:"Note : Hey this is just informed i am on leave tommarow". 
+font-size:25px;   
+}
+
+
+</p>
+<p>2. before the element: 
+p::before 
+{
+content:"Note : Hey this is just informed i am on leave tommarow". 
+font-size:25px;   
+}
+
+</p>
+</div> -->
+
+
+<!-- after -->
+
+<div class="app">
+<p><br> Hey i am just announce some new </p>
+</div>
+
+
+<!-- before -->
+<div class="app1">
+<p>Please take a note all Thanks by Brijesh </p>
+</div>
+
+</body>
+</html>

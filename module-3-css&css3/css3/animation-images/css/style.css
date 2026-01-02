@@ -1,0 +1,63 @@
+body 
+{
+width: 100%;
+height: 678px;
+background: url('https://plus.unsplash.com/premium_photo-1687173116184-2277b7a516ca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sb3JmdWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+-webkit-animation:infinite 5s anim;
+-o-animation: infinite 5s anim;
+-moz-animation: infinite 5s anim;
+animation: infinite 5s anim;
+animation-delay: 10s;
+}
+
+@keyframes anim {
+10%
+{
+width: 100%;
+height: 678px;
+background: url('https://i.pinimg.com/736x/35/61/26/3561267f753f15a3b12bf1c642d512d2.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}   
+20%
+{
+width: 100%;
+height: 678px;
+background: url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+} 
+30%
+{
+width: 100%;
+height: 678px;
+background: url('https://cdn.pixabay.com/photo/2024/03/10/16/13/flower-8625039_1280.png') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+} 
+40%
+{
+width: 100%;
+height: 678px;
+background: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/green-natural-background-with-wooden-surface-free-image.jpeg?w=2210&quality=70') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed; 
+}
+50%
+{
+width: 100%;
+height: 678px;
+background: url('https://images.pexels.com/photos/1553406/pexels-photo-1553406.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+}

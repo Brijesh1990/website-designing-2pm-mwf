@@ -1,0 +1,24 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: aqua;    
+}
+h1 
+{
+text-align: center;
+font-size: 45px;    
+/* animation: 0.8s flash infinite; */
+/* animation: 0.8s tada infinite; */
+/* animation: 0.8s heartBeat infinite; */
+animation: 4s backInDown infinite;
+margin-top: 15%;
+font-size: 85px;
+}
+/* 
+h1 span 
+{
+ animation: infinite  5s flash;   
+animation: infinite  1s bounce;
+} */
