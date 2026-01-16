@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<script>
+//applied style using javascript //
+function display()
+{
+document.getElementById("btn1").style="width:20%; height:auto; margin:auto; background-color:black; color:white; margin-left:35%; padding:15px";
+
+document.getElementById("btn2").style="width:20%; height:auto; margin:auto; background-color:black; color:white; margin-left:35%; padding:15px";
+
+document.getElementById("btn3").style="width:20%; height:auto; margin:auto; background-color:black; color:white; margin-left:35%; padding:15px";
+
+document.getElementById("btn4").style="width:20%; height:auto; margin:auto; background-color:black; color:white; margin-left:35%; padding:15px";
+} 
+function add()
+{
+var a=parseInt(prompt("Enter a values :"));
+var b=parseInt(prompt("Enter a values :"));
+var c=a+b;
+alert('Additions of numbers is :'+c)
+}
+
+function subs()
+{
+var a=parseInt(prompt("Enter a values :"));
+var b=parseInt(prompt("Enter a values :"));
+var c=a-b;
+alert('Substractions of numbers is :'+c)
+}
+
+function mult()
+{
+var a=parseInt(prompt("Enter a values :"));
+var b=parseInt(prompt("Enter a values :"));
+var c=a*b;
+alert('Multiplications of numbers is :'+c)
+}
+
+function dv()
+{
+var a=parseInt(prompt("Enter a values :"));
+var b=parseInt(prompt("Enter a values :"));
+var c=a/b;
+alert('Divisions of numbers is :'+c)
+}
+</script>
+</head>
+<body onload="display()">
+<button type="button" id="btn1" onclick="add()">Add a Numbers</button>
+<br><br>
+<button type="button" id="btn2" ondblclick="subs()">Substract a Numbers</button>
+<br><br>
+<button type="button" id="btn3" onclick="mult()">Multiply a Numbers</button>
+<br><br>
+<button type="button" id="btn4"  ondblclick="dv()">Divide a Numbers</button>
+</body>
+</html>

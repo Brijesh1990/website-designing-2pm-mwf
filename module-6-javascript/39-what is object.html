@@ -1,0 +1,39 @@
+<script>
+    // What is an object in JavaScript?
+    // An object is a non-primitive data type that allows you to store multiple values as properties and methods.
+    // Objects are defined using curly braces {} and consist of property-value pairs.
+    // Objects are mutable, meaning their properties can be changed after creation.
+
+    // object as literal way
+
+    // var person = {
+    //     firstName: "John",
+    //     lastName: "Doe",
+    //     age: 30,
+    //     isEmployed: true,
+    //     greet: function() {
+    //         console.log("Hello, my name is " + this.firstName + " " + this.lastName);
+    //     }
+    // };
+    // console.log(person);
+    // console.log(person.firstName);
+    // console.log(person.age);
+    // person.greet();
+
+
+    // object as object way
+    
+    var car = new Object();
+    car.make = "Toyota";
+    car.model = "Camry";
+    car.year = 2020;
+    car.start = function() {
+        console.log("The car has started.");
+    };
+    console.log(car);
+    console.log(car.make);
+    console.log(car.year);
+    car.start();
+
+
+</script>

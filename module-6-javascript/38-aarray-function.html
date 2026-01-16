@@ -1,0 +1,38 @@
+<script>
+    // array functions in javascript?
+    // array functions are built-in methods that can be used to manipulate arrays
+
+    var arr = [10, 20, 30, 40, 50];
+    console.log("Original Array: " + arr);
+    // push() : adds one or more elements to the end of an array
+    arr.push(60);
+    console.log("After push(60): " + arr);  
+
+    // pop() : removes the last element from an array
+    arr.pop();
+    console.log("After pop(): " + arr);
+
+    // shift() : removes the first element from an array
+    arr.shift();
+
+    console.log("After shift(): " + arr);
+    // unshift() : adds one or more elements to the beginning of an array
+    arr.unshift(5);
+
+    console.log("After unshift(5): " + arr);
+
+    // splice() : adds or removes elements from an array at a specified index
+    arr.splice(2, 0, 25); // at index 2, remove 0 elements, add 25
+    console.log("After splice(2, 0, 25): " + arr);
+
+    // slice() : returns a shallow copy of a portion of an array into a new array object
+    var newArr = arr.slice(1, 4); // from index 1 to 4 (not including 4)
+    console.log("After slice(1, 4): " + newArr);
+
+    // indexOf() : returns the first index at which a given element can be found in the array
+    var index = arr.indexOf(30);
+
+    console.log("Index of 30: " + index);
+    
+
+</script>

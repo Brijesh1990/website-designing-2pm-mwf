@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<script>
+//applied style using javascript //
+function display()
+{
+document.getElementById("btn1").style="width:15%; height:auto; margin:auto; background-color:black; color:white; padding:15px";
+} 
+function add()
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);    
+var c=a+b;
+// alert('Additions of numbers is :'+c)
+document.getElementById("res").innerHTML="THe additions of numbers is :"+c;
+}
+</script>
+</head>
+<body onload="display()">
+<p align="center" id="res"></p>
+<center>
+<form>
+<input type="text" id="a" placeholder="Enter a values">
+<br><br>
+<input type="text" id="b" placeholder="Enter b values">
+<br><br>
+<button type="button" id="btn1" onclick="add()">Add a Numbers</button>
+</form>
+</center>
+</body>
+</html>
