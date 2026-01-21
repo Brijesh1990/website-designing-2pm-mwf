@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<!-- call jquery CDN -->
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<!-- applied animations  -->
+<script>
+$(document).ready(function(){
+$("#btn").click(function(){
+$("#para").css("position", "absolute")
+.animate({
+     left: "250px",
+     top: "50px",
+     width: "300px",
+     height: "150px"
+
+},500)
+})
+})
+</script>
+</head>
+<body>
+
+<button type="button" id="btn">Click to animate</button>
+<p id="para">Jemisha animation</p>
+</body>
+</html>
