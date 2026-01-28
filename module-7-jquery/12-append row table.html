@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Append Row to Table - jQuery Examples</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='js/jquery.min.js'></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+        color: #333;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 10px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #007bff;
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+    
+    td {
+        padding: 10px 12px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    tr:hover {
+        background-color: #f0f0f0;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px 5px 10px 0;
+        font-size: 14px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    input[type="text"], input[type="number"] {
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+    
+    .delete-btn {
+        background-color: #dc3545;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    
+    // ===== EXAMPLE 1: Simple Append Row with Fixed Data =====
+    $('#btn-example1').click(function(){
+        var newRow = "<tr><td>John Doe</td><td>25</td><td>Engineer</td></tr>";
+        $('#table1 tbody').append(newRow);
+    });
+    
+    
+    // ===== EXAMPLE 2: Append Row with Input Field Values =====
+    $('#btn-example2').click(function(){
+        var name = $('#name-input').val();
+        var email = $('#email-input').val();
+        var phone = $('#phone-input').val();
+        
+        if(name == '' || email == '' || phone == ''){
+            alert('Please fill all fields!');
+            return false;
+        }
+        
+        var newRow = "<tr><td>" + name + "</td><td>" + email + "</td><td>" + phone + "</td></tr>";
+        $('#table2 tbody').append(newRow);
+        
+        // Clear input fields
+        $('#name-input').val('');
+        $('#email-input').val('');
+        $('#phone-input').val('');
+    });
+    
+    
+    // ===== EXAMPLE 3: Append Row with Delete Button =====
+    $(document).on('click', '.delete-btn', function(){
+        $(this).closest('tr').remove();
+    });
+    
+    $('#btn-example3').click(function(){
+        var productName = $('#product-name').val();
+        var quantity = $('#product-qty').val();
+        var price = $('#product-price').val();
+        
+        if(productName == '' || quantity == '' || price == ''){
+            alert('Please fill all fields!');
+            return false;
+        }
+        
+        var total = quantity * price;
+        var newRow = "<tr><td>" + productName + "</td><td>" + quantity + "</td><td>$" + price + "</td><td>$" + total + "</td><td><button class='delete-btn'>Delete</button></td></tr>";
+        $('#table3 tbody').append(newRow);
+        
+        // Clear input fields
+        $('#product-name').val('');
+        $('#product-qty').val('');
+        $('#product-price').val('');
+    });
+    
+    
+    // ===== EXAMPLE 4: Append Row at Beginning (Prepend) =====
+    $('#btn-example4').click(function(){
+        var playerName = $('#player-name').val();
+        var score = $('#player-score').val();
+        
+        if(playerName == '' || score == ''){
+            alert('Please fill all fields!');
+            return false;
+        }
+        
+        var newRow = "<tr><td>" + playerName + "</td><td>" + score + "</td></tr>";
+        $('#table4 tbody').prepend(newRow);
+        
+        // Clear input fields
+        $('#player-name').val('');
+        $('#player-score').val('');
+    });
+    
+    
+    // ===== EXAMPLE 5: Append Row with HTML Elements =====
+    $('#btn-example5').click(function(){
+        var newRow = $("<tr>")
+            .append($("<td>").text("Jane Smith"))
+            .append($("<td>").text("30"))
+            .append($("<td>").append($("<button>").text("Edit").css("background-color", "#28a745")))
+            .append($("<td>").append($("<button>").addClass("delete-btn").text("Delete")));
+        
+        $('#table5 tbody').append(newRow);
+    });
+    
+    
+    // ===== EXAMPLE 6: Append Multiple Rows =====
+    $('#btn-example6').click(function(){
+        var data = [
+            {name: "Alice", age: 28, city: "New York"},
+            {name: "Bob", age: 35, city: "Los Angeles"},
+            {name: "Charlie", age: 22, city: "Chicago"}
+        ];
+        
+        $.each(data, function(index, item){
+            var newRow = "<tr><td>" + item.name + "</td><td>" + item.age + "</td><td>" + item.city + "</td></tr>";
+            $('#table6 tbody').append(newRow);
+        });
+    });
+    
+    
+    // ===== EXAMPLE 7: Clear and Append Rows =====
+    $('#btn-example7').click(function(){
+        $('#table7 tbody').html('');
+        
+        var newRow = "<tr><td>Reset Row 1</td><td>Data 1</td></tr>" +
+                     "<tr><td>Reset Row 2</td><td>Data 2</td></tr>";
+        $('#table7 tbody').append(newRow);
+    });
+});
+</script>
+</head>
+<body>
+
+<h1 style="color: #333; text-align: center;">jQuery - Append Row to Table Examples</h1>
+
+<!-- EXAMPLE 1: Simple Append -->
+<div class="container">
+    <h2>Example 1: Simple Append with Fixed Data</h2>
+    <button id="btn-example1">Add Row</button>
+    <table id="table1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mark Wilson</td>
+                <td>28</td>
+                <td>Manager</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 2: Append with Input Values -->
+<div class="container">
+    <h2>Example 2: Append Row from Input Fields</h2>
+    <div>
+        <input type="text" id="name-input" placeholder="Enter Name">
+        <input type="text" id="email-input" placeholder="Enter Email">
+        <input type="text" id="phone-input" placeholder="Enter Phone">
+        <button id="btn-example2">Add Contact</button>
+    </div>
+    <table id="table2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sarah Johnson</td>
+                <td>sarah@email.com</td>
+                <td>123-456-7890</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 3: Append with Delete Button -->
+<div class="container">
+    <h2>Example 3: Append Row with Delete Function</h2>
+    <div>
+        <input type="text" id="product-name" placeholder="Product Name">
+        <input type="number" id="product-qty" placeholder="Quantity">
+        <input type="number" id="product-price" placeholder="Price">
+        <button id="btn-example3">Add Product</button>
+    </div>
+    <table id="table3">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>5</td>
+                <td>$800</td>
+                <td>$4000</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 4: Prepend (Add at Beginning) -->
+<div class="container">
+    <h2>Example 4: Prepend Row (Add at Beginning)</h2>
+    <div>
+        <input type="text" id="player-name" placeholder="Player Name">
+        <input type="number" id="player-score" placeholder="Score">
+        <button id="btn-example4">Add Player (Top)</button>
+    </div>
+    <table id="table4">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Michael Chen</td>
+                <td>1500</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 5: Append with jQuery Object -->
+<div class="container">
+    <h2>Example 5: Append Row Using jQuery Object</h2>
+    <button id="btn-example5">Add Row (jQuery Method)</button>
+    <table id="table5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tom Brown</td>
+                <td>32</td>
+                <td><button style="background-color: #28a745;">Edit</button></td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 6: Append Multiple Rows -->
+<div class="container">
+    <h2>Example 6: Append Multiple Rows at Once</h2>
+    <button id="btn-example6">Add Multiple Rows</button>
+    <table id="table6">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Initial Row</td>
+                <td>25</td>
+                <td>Boston</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- EXAMPLE 7: Clear and Append -->
+<div class="container">
+    <h2>Example 7: Clear Table and Add New Rows</h2>
+    <button id="btn-example7">Reset Table</button>
+    <table id="table7">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Original Row 1</td>
+                <td>Original Data 1</td>
+            </tr>
+            <tr>
+                <td>Original Row 2</td>
+                <td>Original Data 2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
