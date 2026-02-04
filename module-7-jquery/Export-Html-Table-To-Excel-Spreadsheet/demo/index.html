@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery table2excel - Demo with Borders</title>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/jszip.min.js"></script>
+<script src="../dist/jquery.table2excel.js"></script>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+table { border-collapse: collapse; margin: 20px 0; }
+table td, table th { border: 1px solid #ddd; padding: 8px; }
+table th { background-color: #4CAF50; color: white; }
+button { margin: 10px 0; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #45a049; }
+h2 { margin-top: 30px; }
+.info { background-color: #f0f0f0; padding: 10px; margin-bottom: 20px; border-left: 4px solid #4CAF50; }
+</style>
+</head>
+<body>
+
+<h2>Export Data in excel</h2>
+<table class="table2excel table2excel_with_borders table2excel_with_colors" data-tableName="Test Table 4">
+<thead>
+
+<tr>
+<th style="background-color: green;">Id</th>
+<th style="background-color: green;">Name</th>
+<th style="background-color: green;">email</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Brijesh</td><td>bkpandey.pandey@gmail.com</td></tr>
+<tr><td>2</td><td>Yash</td><td>yashrawal@gmail.com</td></tr>
+<tr><td>3</td><td>mahek</td><td>Mahek@gmail.com</td></tr>
+</tbody>
+
+</table>
+<button class="exportToExcel">Export to XLSX with Borders</button>
+
+<script>
+$(function() {
+$(".exportToExcel").click(function(e){
+var table = $(this).prev('.table2excel');
+if(table && table.length){
+var preserveColors = (table.hasClass('table2excel_with_colors') ? true : false);
+var withBorders = (table.hasClass('table2excel_with_borders') ? true : false);
+
+var options = {
+exclude: ".noExl",
+name: "Excel Document Name",
+filename: "userinfo" + new Date().toISOString().replace(/[\-\:\.]/g, ""),
+exclude_img: true,
+exclude_links: true,
+exclude_inputs: true,
+preserveColors: preserveColors
+};
+
+// Add borders option if requested
+if (withBorders) {
+options.borders = true;
+options.fileext = ".xlsx";
+} else {
+options.fileext = ".xls";
+}
+
+$(table).table2excel(options);
+}
+});
+
+});
+</script>
+</body>
+</html>
