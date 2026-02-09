@@ -1,0 +1,65 @@
+// variables is scss file
+$max-width: 1200px;
+$max-height: 800px;
+$min-width: 300px;
+$min-height: 200px;
+$margin-auto: auto;
+$margin-left: 500px;
+$margin-top:200px;
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$text-white: #fff;
+$background-color: #f5f5f5;
+$bg-dark: #333;
+$bg-danger: #e74c3c;
+$bg-info: #3498db;
+$font-family: 'Arial, sans-serif';
+$padding: 20px;
+$border-radius: 5px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$margin: 10px;
+
+// .app {
+// width: $min-width;    
+// height: $min-height;
+// margin-left: $margin-left;
+// background-color: $bg-dark;
+// margin-top: $margin-top;
+// color: $text-white;
+// font-family: $font-family;
+// padding: $padding;
+// border-radius: $border-radius;
+// box-shadow: $box-shadow;
+// }
+// h1 {
+// color: $primary-color;
+// }
+
+// p {
+// color: $text-white;
+// }
+
+
+.app {
+    width: 100%;    
+    height: $min-height;
+    background-color: $bg-dark;
+    color: $text-white;
+    font-family: $font-family;
+    padding: $padding;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    width: 20%;
+    padding: $padding;
+    background-color: $bg-info;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: 10px;
+    margin-bottom: $margin;
+    
+}
