@@ -1,0 +1,98 @@
+$bg-violet:#764199;
+$txt-violet:#764199;
+$bg-pink:#f3a6cc;
+$txt-pink:#f3a6cc;
+$bg-white:white;
+$txt-white:white;
+$max-width:100%;
+$min-width:80%;
+$max-height:auto;
+$min-height:auto;
+
+// main stylesheet
+#header
+{
+width: $max-width;
+height: auto;
+display: flex;
+flex-wrap: wrap;   
+}
+.logo
+{
+width: 55%;
+height: auto;
+margin: 3px;
+padding: 8px;   
+}
+.logo img 
+{
+width: 20%;   
+}
+
+.navbar
+{
+width: 40%;
+height: auto;
+margin: 3px;
+padding: 8px;   
+}
+.navbar ul li 
+{
+display: inline-block;
+padding: 8px 15px;
+text-decoration: none;
+list-style-type: none;
+
+}
+.navbar a 
+{
+text-decoration: none;
+list-style-type: none;  
+color: black;
+font-size: 20px;
+}
+#reg 
+{
+ width: auto;
+ height: auto;
+ padding: 8px;
+ border: 0;
+ background-color: $bg-violet;   
+ color: $txt-white;
+ border-radius: 2px;
+}
+#hero-section 
+{
+width: $max-width;
+height: auto;
+display: flex;
+flex-wrap: wrap;    
+}
+.banner-txt
+{
+width: 45%;
+height: auto;
+padding: 25px;    
+}
+.banner-txt h1 
+{
+    color: #764199;
+    font-size: 58px;
+}
+#para
+{
+    color: #f3a6cc;
+
+}
+
+.banner-img
+{
+width: 45%;
+height: auto;
+padding: 25px;    
+}
+.banner-img img 
+{
+    width: 70%;
+    height: auto;
+}

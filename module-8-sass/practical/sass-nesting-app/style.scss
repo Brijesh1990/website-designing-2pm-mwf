@@ -1,0 +1,48 @@
+// variables 
+$bg-violet:#764199;
+$txt-violet:#764199;
+$bg-pink:#f3a6cc;
+$txt-pink:#f3a6cc;
+$bg-white:white;
+$txt-white:white;
+$max-width:100%;
+$min-width:80%;
+$max-height:auto;
+$min-height:auto;
+
+body 
+{
+background-color: #f3a6cc;
+box-sizing: border-box;
+overflow-x: hidden;
+margin: 0;
+padding: 0;    
+}
+// nesting via sass 
+.navbar
+{
+  width: $max-width;
+  height: auto;
+  background-color: black;
+  padding: 8px;
+  
+    .menu 
+    {
+        width: auto;
+        height: auto;
+        li 
+        {
+            display: inline-block;
+            padding: 5px 25px;
+            text-decoration: none;
+            list-style-type: none;
+
+           a{
+             text-decoration: none;
+            list-style-type: none;
+            color: white;
+           } 
+        }
+    } 
+
+}

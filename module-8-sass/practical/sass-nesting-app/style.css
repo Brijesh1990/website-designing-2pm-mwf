@@ -1,0 +1,31 @@
+body {
+  background-color: #f3a6cc;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 8px;
+}
+.navbar .menu {
+  width: auto;
+  height: auto;
+}
+.navbar .menu li {
+  display: inline-block;
+  padding: 5px 25px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.navbar .menu li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

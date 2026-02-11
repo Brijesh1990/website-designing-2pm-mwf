@@ -73,6 +73,151 @@ Overall, installing Sass is straightforward, and it provides a powerful way to e
 
 
 
+## variables in sass 
+
+   **A variable ids used to stored an information of data there we used variable**
+
+   1. in sass variables is used to stored color | background color | size | margin | fonts etc.
+
+   2. we used a variables to stored with $ symbol
+
+   **examples**
+
+```
+  $bg-violet:#764199;
+  $txt-violet:#764199;
+  $bg-pink:#f3a6cc;
+  $txt-pink:#f3a6cc;
+  $bg-white:white;
+  $txt-white:white;
+  $max-width:100%;
+  $min-width:80%;
+  $max-height:auto;
+  $min-height:auto;
+
+ // main stylesheet
+ #header
+ {
+ width: $max-width;
+ height: auto;
+ display: flex;
+ flex-wrap: wrap;   
+ }
+ .logo
+ {
+ width: 55%;
+ height: auto;
+ margin: 3px;
+ padding: 8px;   
+ }
+ .logo img 
+ {
+ width: 20%;   
+ }
+
+ .navbar
+ {
+ width: 40%;
+ height: auto;
+ margin: 3px;
+ padding: 8px;   
+ }
+ .navbar ul li 
+ {
+ display: inline-block;
+ padding: 8px 15px;
+ text-decoration: none;
+ list-style-type: none;
+
+ }
+ .navbar a 
+  {
+  text-decoration: none;
+  list-style-type: none;  
+  color: black;
+  font-size: 20px;
+  }
+  #reg 
+  {
+ width: auto;
+ height: auto;
+ padding: 8px;
+ border: 0;
+ background-color: $bg-violet;   
+ color: $txt-white;
+ border-radius: 2px;
+ }
+ #hero-section 
+ {
+ width: $max-width;
+ height: auto;
+ display: flex;
+ flex-wrap: wrap;    
+ }
+ .banner-txt
+ {
+ width: 45%;
+ height: auto;
+ padding: 25px;    
+ }
+ .banner-txt h1 
+ {
+    color: #764199;
+    font-size: 58px;
+ }
+ #para
+ {
+    color: #f3a6cc;
+ }
+
+ .banner-img
+ {
+ width: 45%;
+ height: auto;
+ padding: 25px;    
+ }
+ .banner-img img 
+ {
+    width: 70%;
+    height: auto;
+  }
+ ``` 
+ 
+## nesting in sass
+
+ **nesting sass**
+ Sass supports nesting of selectors, which helps to organize your CSS in a more hierarchical and readable way. This can reduce the amount of code you need to write and make it easier to understand the structure of your styles.
+
+ **examples**
+
+ ```
+     .menu 
+    {
+        width: auto;
+        height: auto;
+        li 
+        {
+            display: inline-block;
+            padding: 5px 25px;
+            text-decoration: none;
+            list-style-type: none;
+
+           a{
+             text-decoration: none;
+            list-style-type: none;
+            color: white;
+           } 
+        }
+    } 
+
+}
+ ```
+
+
+
+
+ 
+
 
 
 
