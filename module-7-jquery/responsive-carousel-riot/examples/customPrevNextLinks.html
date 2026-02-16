@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Riot Slider - Customized Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- including material icons beforehand is not required, but it is more efficient  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../riot-slider.min.css" />
+  </head>
+  <body id="home">
+    <div class="mainContainer">
+      <h1>Riot Slider - Custom Previous and Next Links Example</h1>
+
+      <ul class="riot-slider">
+        <li data-caption="Blue Jay">
+          <img src="./images/blue-jay.jpg" />
+        </li>
+        <li><img src="./images/squirrel.jpg" /></li>
+        <li><img src="./images/port-au-prince-haiti.jpg" /></li>
+        <li><img src="./images/pennsylvania-landscape.jpg" /></li>
+        <li>
+          <p><b>Main Text Here</b></p>
+          <p>More text here!</p>
+        </li>
+      </ul>
+	  
+	  <!-- 
+      add links outside of the slider to go to the previous and next slides by adding classes: 
+      class="riot-slider-custom-link-prev"
+      class="riot-slider-custom-link-prev"
+      can be set up with any element (image, div, button, etc)
+      * note that if you are using multiple sliders on a page, all sliders will be affected
+	  -->
+	  
+	  <br><a class="riot-slider-custom-link-prev" href="#">Previous Slide</a>
+	  <br><br><a class="riot-slider-custom-link-prev" href="#">Next Slide</a>
+	  
+	  <br><bR><br><a class="riot-slider-custom-link-prev" href="#">Another Link to Previous Slide</a>
+	  <br><br><a class="riot-slider-custom-link-prev" href="#">Another Link to Next Slide</a>
+
+      <!-- including jquery beforehand is not required, but it is more efficient  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <script src="./../riot-slider.js"></script>
+    </div>
+  </body>
+</html>

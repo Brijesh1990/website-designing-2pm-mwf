@@ -11,6 +11,8 @@ body {
   height: auto;
   background-color: black;
   padding: 8px;
+  top: 0;
+  position: sticky;
 }
 .navbar .menu {
   width: auto;
@@ -26,6 +28,56 @@ body {
   text-decoration: none;
   list-style-type: none;
   color: white;
+}
+
+#content {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 5%;
+}
+#content .leftsidebar {
+  width: 30%;
+  height: 300px;
+  background-color: white;
+  padding: 25px;
+}
+#content .leftsidebar h1 {
+  color: red;
+  font-size: 35px;
+}
+#content .rightsidebar {
+  width: 60%;
+  height: 300px;
+  background-color: cadetblue;
+  padding: 25px;
+  color: white;
+}
+#content .rightsidebar h1 {
+  color: blue;
+  font-size: 35px;
+}
+#content .team-app {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+#content .team-app h1 {
+  text-align: center;
+  font-size: 55px;
+  display: block;
+}
+#content .team-app .box1 {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

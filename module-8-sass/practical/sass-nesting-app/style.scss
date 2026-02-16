@@ -18,13 +18,15 @@ overflow-x: hidden;
 margin: 0;
 padding: 0;    
 }
-// nesting via sass 
+// nesting via sass of navbar
 .navbar
 {
   width: $max-width;
   height: auto;
   background-color: black;
   padding: 8px;
+  top: 0;
+  position: sticky;
   
     .menu 
     {
@@ -45,4 +47,69 @@ padding: 0;
         }
     } 
 
+}
+
+// nesting in content 
+#content
+{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 5%;
+  .leftsidebar
+  {
+   width: 30%;
+   height: 300px;
+   background-color:white;
+   padding: 25px;
+
+   h1 {
+    color: red;
+    font-size: 35px;
+
+   }
+  }
+  .rightsidebar
+  {
+     width: 60%;
+   height: 300px;
+   background-color:cadetblue;
+   padding: 25px;
+   color: white;
+   h1 
+   {
+    color: blue;
+    font-size: 35px;
+   } 
+  }
+
+  .team-app
+  {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  
+ 
+  h1 
+  {
+    text-align: center;
+    font-size: 55px;
+    display: block;
+  }  
+
+   .box1
+  {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    
+  }
+  }
 }

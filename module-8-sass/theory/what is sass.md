@@ -213,7 +213,24 @@ Overall, installing Sass is straightforward, and it provides a powerful way to e
 }
  ```
 
+## what is sass mixin ?
+  **definition**
+  1. sass mixin is used to re-usables code
+  2. sass mixin basically used for re-used style one section to another section 
+  3. A mixin is define once and include anywhere in your stylesheet
+  4. A mixin is help you to avoid repeattion of code.
+  5. A mixin is used to keep code clean and write dynamic styles using parameters and conditions and logic.
 
+  **syntax of mixing**
+
+  ```
+  @mixin mixin-name {
+   re-usables of code 
+  }
+
+  @include mixin-name
+  
+  ```   
 
 
  

@@ -1,0 +1,140 @@
+$bg-violet:#764199;
+$txt-violet:#764199;
+$bg-pink:#f3a6cc;
+$txt-pink:#f3a6cc;
+$bg-white:white;
+$txt-white:white;
+$max-width:100%;
+$min-width:80%;
+$max-height:auto;
+$min-height:auto;
+body 
+{
+background-color: #f3a6cc;
+box-sizing: border-box;
+overflow-x: hidden;
+margin: 0;
+padding: 0;    
+}
+// nesting via sass of navbar
+
+.navbar
+{
+  width: $max-width;
+  height: auto;
+  background-color: black;
+  padding: 8px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  .logo
+  {
+    width: 30%;
+    color: white;
+    display: flex;
+    margin-left: 5%;
+
+  }
+    .menu 
+    {
+        width: 60%;
+        height: auto;
+        li 
+        {
+            display: inline-block;
+            padding: 5px 25px;
+            text-decoration: none;
+            list-style-type: none;
+
+           a{
+             text-decoration: none;
+            list-style-type: none;
+            color: white;
+           } 
+        }
+    } 
+}
+
+// call mixin 
+@mixin content-box 
+{
+width: 80%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+}
+@mixin parent-box
+{
+ width: 100%;
+ height: auto;
+ margin: auto;
+ display: flex;
+ flex-wrap: wrap;   
+}
+@mixin left-sidebar
+{
+width: 30%;
+height: 250px;
+background-color: white;
+padding: 15px;    
+}
+@mixin right-sidebar
+{
+width: 60%;
+height: 250px;
+background-color: black;
+padding: 15px;    
+color: white;
+}
+.content
+{
+@include content-box
+}
+.parent
+{
+@include parent-box
+}
+.leftsidebar
+{
+
+@include left-sidebar
+}
+.rightsidebar 
+{
+@include right-sidebar     
+}
+
+//add parameter in mixin (single parameter) and multiple parameters 
+@mixin our-team-content($min-width,$min-height,$margin,$padding)
+{
+    width: $min-width;
+    height: $min-height;
+    margin: auto;
+    padding: $padding;
+    display: flex;
+    flex-wrap: wrap;    
+}
+@mixin team-member-content($max-width,$min-height,$margin,$padding,$bg-violet, $bord-rad,$margin-top)
+{
+    width: $max-width;
+    height: $min-height;
+    margin: $margin;
+    padding: $padding;
+    background-color: $bg-violet;
+    border-radius: $bord-rad;    
+    margin-top: $margin-top;
+}
+.our-team 
+{
+ @include our-team-content(80%,auto,5px,0px);   
+}
+
+.team-member
+{
+ @include team-member-content(120px,120px,auto,25px,#764199,50%,10%);   
+}
+
+
+
+

@@ -1,0 +1,90 @@
+body {
+  background-color: #f3a6cc;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 8px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar .logo {
+  width: 30%;
+  color: white;
+  display: flex;
+  margin-left: 5%;
+}
+.navbar .menu {
+  width: 60%;
+  height: auto;
+}
+.navbar .menu li {
+  display: inline-block;
+  padding: 5px 25px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.navbar .menu li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+
+.content {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.parent {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftsidebar {
+  width: 30%;
+  height: 250px;
+  background-color: white;
+  padding: 15px;
+}
+
+.rightsidebar {
+  width: 60%;
+  height: 250px;
+  background-color: black;
+  padding: 15px;
+  color: white;
+}
+
+.our-team {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  padding: 25px;
+  background-color: #764199;
+  border-radius: 50%;
+  margin-top: 10%;
+}
+
+/*# sourceMappingURL=style.css.map */
