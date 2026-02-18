@@ -1,0 +1,104 @@
+$bg-white:#ffffff;
+$bg-volet:#714b67;
+$bg-lightgray:#f3f4f6;
+$bg-blue:#252733;
+$bg-dark-blue:#1a1c24;
+
+$txt-white:#ffffff;
+$txt-volet:#714b67;
+$txt-lightgray:#f3f4f6;
+$txt-blue:#252733;
+$txt-dark-blue:#1a1c24;
+
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: $bg-white;    
+}
+// navigation style
+#odo-header
+{
+width: 100%;
+height: auto;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+border-bottom: solid 1px #f3f4f6;
+top: 0;
+position: sticky;
+background-color: #ffffff;
+// justify-content: center;
+// align-items: center;    
+.logo
+{
+width: 30%;
+height: auto;
+// margin: auto;
+padding: 8px;
+} 
+.menu
+{
+width: 65%;
+height: auto;
+margin: auto;
+ul li 
+{
+display: inline-block;
+list-style-type: none;
+text-decoration: none;
+padding: 0px 20px;
+font-size: 18px;
+text-transform: capitalize;
+} 
+a 
+{
+text-decoration: none;
+list-style-type: none;
+color: black;
+}
+.signIn
+{
+margin-left: 60%;
+}
+.btn
+{
+width: 80px;
+height: auto;
+background-color: #714b67;
+border: none;
+color: white;
+padding: 8px;
+border-radius: 8px;
+margin-left: 0%;
+}
+}
+}
+
+// content
+@mixin content-box
+{
+width: 80%;
+height: auto;
+margin: auto;
+padding: 0px;
+margin-top: 5%;    
+}
+@mixin products-box 
+{
+width: 70%;
+height: auto;
+margin: auto;
+padding: 85px;
+margin-top: 5%;
+border: solid 2px #252733;
+}
+#odo-content
+{
+@include content-box();    
+}
+.products
+{
+@include products-box();    
+}

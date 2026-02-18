@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+#odo-header {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #f3f4f6;
+  top: 0;
+  position: sticky;
+  background-color: #ffffff;
+}
+#odo-header .logo {
+  width: 30%;
+  height: auto;
+  padding: 8px;
+}
+#odo-header .menu {
+  width: 65%;
+  height: auto;
+  margin: auto;
+}
+#odo-header .menu ul li {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0px 20px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+#odo-header .menu a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+#odo-header .menu .signIn {
+  margin-left: 60%;
+}
+#odo-header .menu .btn {
+  width: 80px;
+  height: auto;
+  background-color: #714b67;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-left: 0%;
+}
+
+#odo-content {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 0px;
+  margin-top: 5%;
+}
+
+.products {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  padding: 85px;
+  margin-top: 5%;
+  border: solid 2px #252733;
+}
+
+/*# sourceMappingURL=style.css.map */
