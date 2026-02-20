@@ -1,0 +1,75 @@
+// create a sass function
+
+// create a function for add two numbers 
+@function add($a,$b)
+{
+    @return $a+$b;
+}
+// create a function for box size
+@function box-size($margin:8px)
+{
+    @return $margin;
+}
+// set opacity like call a function 
+@function bgopacity($color,$opacity)
+{
+   @return rgba($color,$opacity); 
+}
+
+
+// condition applied via sass 
+@function theme-color($mode)
+{    
+//apply condition 
+@if $mode==dark
+{
+    @return #000;
+} 
+@else 
+{
+   @return rgba(255,0,0,0.9);
+}
+}
+
+
+// call function in .box 
+.box 
+{
+width: add(100px, 80px); 
+height: auto;
+margin: auto;
+padding: 25px;
+background-color: aqua;   
+}
+// box-sizing ...
+.box-size
+{
+width: add(200px,100px);
+height: auto;
+margin: box-size();
+margin-left: 40%;    
+padding: 15px;
+margin-top: 2%;
+background-color: black;
+color: white;
+}
+.opct
+{
+width: add(200px,100px);
+height: auto;
+margin: box-size();
+margin-left: 40%;    
+padding: 15px;
+margin-top: 2%;
+color: white; 
+background-color: bgopacity(black,0.1);   
+}
+.theme
+{
+ width: 30%;
+ height: auto;
+ margin: auto;
+ padding: 25px;
+ margin-top: 5%;
+ background-color: theme-color( notfound);
+}
